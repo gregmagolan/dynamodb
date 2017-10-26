@@ -15,7 +15,7 @@ var Account = dynamo.define('Foobar', {
     name    : Joi.string(),
     age     : Joi.number(),
     scores  : dynamo.types.numberSet(),
-    created : Joi.date().default(Date.now),
+    created : Joi.date().default(Date.now, 'created at'),
     list    : Joi.array(),
     settings : {
       nickname    : Joi.string(),
